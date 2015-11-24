@@ -1,5 +1,8 @@
 
-# coding: utf-8
+from __future__ import print_function, division
+from time import strftime
+from pprint import pprint
+import math,random
 
 # In[58]:
 
@@ -8,10 +11,7 @@ __copyright__ = "NA"
 __license__ = "NA"
 __version__ = "2.0"
 
-from __future__ import print_function, division
-from time import strftime
-from pprint import pprint
-import math,random
+
 
 # Osyczka2
 
