@@ -12,6 +12,7 @@ __version__ = "1.0"
 class DTLZ7:
     
     """
+    DTLZ7 with 2 objectives 10 decisions.
     :param num_decisions    - Number of decisions/dimension of the array
     :param num_objectives   - Number of objectives to evaluate (f1,f2,....)
     :param dec_high         - Max range of the decision
