@@ -21,8 +21,11 @@ class DTLZ7:
     :param num_objectives   - Number of objectives to evaluate (f1,f2,....)
     :param evals            - Keeps the track of the number of evaluations
     
-    :func  f1               - scores a candidate on first objective
-    :func  f2               - scores a candidate on second objective
+    :func  f9               - scores a candidate on first objective
+    :func  f10              - scores a candidate on second objective
+    :func  g                - helper on second objective
+    :func  h                - helper on second objective
+    :func  h_helper         - helper to h
     :func  function_value   - A function that scores a candidate
     :func  constraint_ok    - A function that checks for constraints (none of Kursawe and Schaffer)
     :func  norm             - A function that computes the objective scores for each candidate(normalized)
@@ -82,7 +85,7 @@ class DTLZ7:
         return self.f9(dec) + self.f10(dec)
     
     def contraint_ok(self,dec):
-        return True
+        return True # no constraints
         
     def randomstate(self):
         while True:
