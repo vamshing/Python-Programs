@@ -93,3 +93,10 @@ class Golinski:
     
     def norm(self,state):
         return (self.function_value(state) - self.obj_low)/(self.obj_high - self.obj_low)
+        
+    def f1_norm(self,state):
+        return (self.f1(state) - self.obj_low)/(self.obj_high - self.obj_low)
+        
+    def f2_norm(self,state):
+        return (self.f2(state) - self.obj_low)/(self.obj_high - self.obj_low)
+        
