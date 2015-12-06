@@ -37,8 +37,8 @@ class DTLZ7:
         self.name = "DTLZ7"
         self.num_decisions = 10
         self.num_objectives = 2
-        self.dec_high = [1 for _ in range(10)]
-        self.dec_low = [0 for _ in range(10)]
+        self.dec_high = [1 for _ in range(self.num_decisions)]
+        self.dec_low = [0 for _ in range(self.num_decisions)]
         self.steps = 10
         self.evals = num_eval
         self.obj_high = high
@@ -64,7 +64,7 @@ class DTLZ7:
         self.obj_low = low
         
     def g(self,dec):
-        return 1 + ((9.)/(self.num_decisions)) * np.sum(dec)
+        return 1 + ((9.)/(self.num_decisions - self.num_objectives+1)) * np.sum(self.dec[self.num_objectives-1:])
     
     def h(self,dec):
         return self.num_decisions - self.h_helper(dec)
